@@ -22,6 +22,13 @@ public class Engine {
 		score= new int[] {0,0};
 		selection=new ArrayList<Bille>();
 	}
+	public ArrayList<Bille> getVoisins(Bille b){
+		int i = b.location[0]
+		int j = b.lacation[1]
+		ArrayList<Bille> voisins = []
+		//remplissage de la liste
+		return (voisins)
+		
 
 	public Plateau getPlate() {
 		return plate;
