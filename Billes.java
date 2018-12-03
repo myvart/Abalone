@@ -24,7 +24,7 @@ public class Engine {
 	}
 	public ArrayList<Bille> getVoisins(Bille b){
 		int i = b.location[0]
-		int j = b.lacation[1]
+		int j = b.location[1]
 		ArrayList<Bille> voisins = []
 		//remplissage de la liste
 		return (voisins)
