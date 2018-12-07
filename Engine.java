@@ -30,10 +30,10 @@ public class Engine {
 		ArrayList<Bille> billes_meme_couleur = new ArrayList<Bille>;
 		ArrayList<Bille> voisins = new ArrayList<Bille>;
 		if (color == 1) {
-			billes_meme_couleur = BillesB
+			billes_meme_couleur = getBillesB();
 		}
 		else {
-			billes_meme_couleur = BillesN
+			billes_meme_couleur = getBillesN();
 		}
 		if 
 		ArrayList<ArrayList<int>> voisins_possibles = new ArrayList<ArrayList<int>>;
@@ -57,7 +57,7 @@ public class Engine {
 		for (ArrayList<int> location : voisins_possibles) {
 			for (Bille b : bille_meme_couleur) {
 				if ( location == getLocation(b)) {
-					voisins.add(b)
+					voisins.add(b);
 				}
 			}
 		}
@@ -74,7 +74,7 @@ public class Engine {
 				voisins_directs.remove(b);
 			}
 			else if (b==bille2){
-				voisins_directs.remove(b)
+				voisins_directs.remove(b);
 			}
 		//for (Bille b : voisins_direct){
 			//if(testAlignement(b, bille1, bille2)==true){
