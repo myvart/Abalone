@@ -23,7 +23,7 @@ public class Engine {
 		selection=new ArrayList<Bille>();
 	}
 	
-	public ArrayList<Bille> getVoisin(bille) {
+	public ArrayList<Bille> getVoisins(bille) {
 		int color = getColor(bille);
 		int i =getLocation(bille)[0];
 		int j =getLocation(bille)[1];
@@ -53,7 +53,6 @@ public class Engine {
 			voisins_possibles.add({i+1,j-1});
 			voisins_possibles.add({i-1,j+1});
 		}
-		//test est dans le plateau ?
 		for (ArrayList<int> location : voisins_possibles) {
 			for (Bille b : bille_meme_couleur) {
 				if ( location == getLocation(b)) {
@@ -81,7 +80,33 @@ public class Engine {
 				//alignes.add(b)
 		return alignes
 		
-	}	
+	}
+	public boolean estSelectionnable(ArrayList<Bille> billes_selectionnes, Bille b)
+		if (billes_selectionnes.size()==0){
+			return true
+		}
+		else if (billes_selectionnes.size()==1){
+			ArrayList<Bille> voisins = getVoisins(bille_selectionnes[0]);
+			for (Bille bille : voisins){
+				if (b==bille){
+					return true
+				}
+			return false
+			}
+		else if (billes_selectionnes.size()==2){
+			ArrayList<Bille> voisins = getAlignes(bille_selectionnes[0]);
+			for (Bille bille : voisins){
+				if (b==bille){
+					return true
+				}
+			return false
+			}
+		else {			//cas d'une tentative de selection d'une 4e bille
+			return false
+		}
+	}
+		
+			
 
 	public Plateau getPlate() {
 		return plate;
